@@ -10,8 +10,10 @@
     </head>
     <body>
         <div class="page">
+            <div class="bar-container">
+                bar
+            </div>
             <div class="title-container">
-                <div class="title-bg"></div>
                 <div class="title">
                     <div class="title-logo">
                         <img src="icons/logo.svg" alt="logo">
@@ -33,9 +35,6 @@
                     </div>
                 </div>
             </div>
-            <div class="bar-container">
-                bar
-            </div>
             <div class="promo-container">
                 <div class="promo">
                     <div class="promo-code">
@@ -50,11 +49,13 @@
     </body>
     <script>
         function codeMaximize() {
-            document.getElementById("promo-visual").style = "transition: clip-path 1.0s ease; clip-path: polygon(100% 67%, 100% 100%, 67% 100%);"
+            document.getElementById("promo-visual").style = "transition: clip-path 1.0s ease; clip-path: polygon(800px 300px, 800px 450px, 533px 450px);"
         }
 
         function visualMaximize() {
-            document.getElementById("promo-visual").style = "clip-path: polygon(100% -67%, 100% 100%, -67% 100%);"
+            document.getElementById("promo-visual").style = "clip-path: polygon(800px -300px, 800px 450px, -533px 450px);"
         }
     </script>
 </html>
+<!--clip-path: polygon(800px 300px, 800px 300px, 800px 450px, 533px 450px, 533px 450px);-->
+<!--clip-path: polygon(800px 0, 800px 0,800px 450px,0 450px, 0 450px);-->
