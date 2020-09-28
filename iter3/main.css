@@ -129,4 +129,17 @@ body {
     .nav > div {
         margin: auto;
     }
+
+    .nav > * {
+        animation: slideLeft 1.5s ease; 
+    }
+    
+    @keyframes slideLeft {
+        0% {
+            transform: translateX(150%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 }
