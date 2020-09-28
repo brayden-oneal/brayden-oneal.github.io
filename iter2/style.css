@@ -35,19 +35,19 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #222;
+    background-color: #fff;
 }
 
 .title-bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(images/web-code.PNG);
+    /*background-image: url(images/web-code.PNG);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(3px);
+    filter: blur(3px);*/
 }
 
 .title {
@@ -66,6 +66,7 @@ body {
 .title-logo img {
     user-select: none;
     -webkit-user-drag: none;
+    
 }
 
 .title-words {
@@ -79,7 +80,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    color: #fff;
+    color: #222;
 }
 
 .title-words-content p, .title-words-content hr {
@@ -88,7 +89,7 @@ body {
 }
 
 .title-words-content hr {
-    border: 2px solid #fff;
+    border: 2px solid #222;
 }
 
 .title-words-bottom {
@@ -111,8 +112,8 @@ body {
 .promo-container {
     background-color: #222;
     position: relative;
-    width: 1200px;
-    height: 100%;
+    width: 800px;
+    height: 600px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -120,8 +121,8 @@ body {
 .promo {
     background-color: none;
     position: absolute;
-    width: 1200px;
-    height: 675px;
+    width: 800px;
+    height: 450px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

@@ -1,0 +1,64 @@
+:root {
+    --primary: #0066ff;
+    --secondary: #ff6600;
+    --pad: 8vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #222;
+    font-size: 26px;
+    font-family: futura-pt;
+    overflow: hidden;
+}
+
+.grid {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: var(--pad) auto var(--pad) auto var(--pad) 1fr var(--pad);
+}
+
+.title {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    grid-row: 2;
+}
+
+.nav {
+    width: calc(calc(calc(100vh - calc(4 * var(--pad))) - 114px)*calc(16/9));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-row: 4;
+    overflow: hidden;
+}
+
+.nav > * {
+    animation: slideUp 1.5s ease; 
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.images {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto calc(calc(calc(100vh - calc(4 * var(--pad))) - 114px)*calc(16/9)) auto;
+    grid-row: 6;
+}

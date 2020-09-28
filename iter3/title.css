@@ -1,0 +1,50 @@
+.title-logo, .title-logo img {
+    background-color: none;
+    height: 80px;
+}
+
+.title-logo img {
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
+.title-words {
+    background-color: none;
+    padding-left: 20px;
+}
+
+.title-words-content {
+    background-color: none;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #222;
+}
+
+.title-words-content p, .title-words-content hr {
+    margin: 0;
+    padding: 0;
+}
+
+.title-words-content hr {
+    border: 1px solid #222;
+}
+
+.title-words-bottom {
+    overflow: hidden;
+}
+
+.title-words-bottom p {
+    animation: slideDown 1.0s ease; 
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

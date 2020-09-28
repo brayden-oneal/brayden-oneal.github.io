@@ -1,0 +1,82 @@
+:root {
+    --pad: 10vh;
+}
+
+.img-left {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr var(--pad);
+    grid-template-rows: var(--pad) 1fr var(--pad);
+}
+
+.img-left-container {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    transition: 0.1s;
+}
+
+.img-left-container img {
+    display: block;
+    position: absolute;
+    max-height: 100%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img-center {
+    position: relative;
+}
+
+.img-center img {
+    display: block;
+    position: absolute;
+    height: 100%;
+}
+
+
+.img-right {
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--pad) 1fr;
+    grid-template-rows: var(--pad) 1fr var(--pad);
+}
+
+.img-right-container {
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    transition: 0.1s;
+}
+
+.img-right-container img {
+    display: block;
+    position: absolute;
+    max-height: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.images img:nth-child(1) {
+    box-shadow: 0 0 8px #000;
+}
+
+.overlay {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: 1.0s;
+}
+
+.img-center:hover {
+    cursor: pointer;
+}
+
+.img-center img:nth-child(1):hover + .overlay, .img-center img:nth-child(2):hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.img-right-container:hover, .img-left-container:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
