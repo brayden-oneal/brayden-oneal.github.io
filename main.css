@@ -48,7 +48,7 @@ body {
 
 .nav > * {
     transform: translateX(0);
-    animation: slideUp 1.5s ease;
+    animation: slideUp 1.0s ease;
     color: #222;
     text-decoration: none;
 }
