@@ -1,0 +1,125 @@
+:root {
+    --primary: #0066ff;
+    --secondary: #ff6600;
+    --pad: 100px;
+}
+
+.preload * {
+    animation-play-state: paused !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #222;
+    font-size: 26px;
+    font-family: futura-pt;
+}
+
+.bar {
+    background-color: #222;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+
+.logo img {
+    margin: 15px 0 0 15px;
+    height: 70px;
+    animation: slideRight 1.0s ease;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    overflow: hidden;
+}
+
+.nav > * {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
+    animation: slideLeft 1.0s ease;
+    transform: translateX(0);
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav *:hover::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: calc(100% - 100px);
+    height: 2px;
+    border-bottom: 2px solid #fff;
+    animation: widen 0.5s ease;
+}
+
+@keyframes widen {
+    0% {
+        width: 0;
+    }
+    
+    100% {
+        width: calc(100% - 100px);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.page {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 400px 2px 1fr;
+}
+
+.outline {
+    position: fixed;
+    margin: 100px 50px 100px 100px;
+    width: 250px;
+}
+
+.divider {
+    position: fixed;
+    border-left: 2px solid #222;
+    margin: 50px 0 0 400px;
+    height: calc(100vh - 200px);
+}
+
+.content {
+    margin: 100px 100px 100px 50px;
+}
+
+h2 {
+    font-weight: normal;
+}

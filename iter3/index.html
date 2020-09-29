@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>SC Computer Science Club</title>
+        <title>SCHS Computer Science Club</title>
         <link rel="icon" href="icons/favicon.svg">
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="title.css">
@@ -33,15 +33,15 @@
             </div>
 
             <div class="nav">
-                <div>
+                <a href="/overview/">
                     OVERVIEW
-                </div>
-                <div>
+                </a>
+                <a href="">
                     PROJECTS
-                </div>
-                <div>
+                </a>
+                <a href="">
                     INFO
-                </div>
+                </a>
             </div>
 
             <div class="images">
@@ -63,6 +63,9 @@
         </div>
     </body>
     <script>
-
+        document.body.classList.add("preload");
+        window.onload = function() {
+            document.body.classList.remove("preload");
+        };
     </script>
 </html>

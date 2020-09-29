@@ -47,7 +47,32 @@ body {
 }
 
 .nav > * {
-    animation: slideUp 1.5s ease; 
+    transform: translateX(0);
+    animation: slideUp 1.5s ease;
+    color: #222;
+    text-decoration: none;
+}
+
+.nav *:hover::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid #222;
+    animation: widen 0.5s ease;
+}
+
+@keyframes widen {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 @keyframes slideUp {
