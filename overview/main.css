@@ -1,4 +1,6 @@
+@import '/share/style/all.css';
 @import '/share/style/animations.css';
+@import '/share/style/bar.css';
 
 :root {
     --pad: 100px;
@@ -20,58 +22,6 @@ body {
     color: #222;
     font-size: 26px;
     font-family: futura-pt;
-}
-
-.bar {
-    background-color: #222;
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    top: 0;
-    color: #fff;
-    display: grid;
-    grid-template-columns: 1fr auto;
-}
-
-
-.logo img {
-    margin: 15px 0 0 15px;
-    height: 70px;
-    animation: slideRight 1.0s ease;
-}
-
-.nav {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    overflow: hidden;
-}
-
-.nav > * {
-    padding-left: 50px;
-    padding-right: 50px;
-    margin: auto;
-    animation: slideLeft 1.0s ease;
-    transform: translateX(0);
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.nav *:hover::before {
-    width: calc(100% - 100px);
-}
-
-.nav *::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 0;
-    overflow: hidden;
-    height: 2px;
-    border-bottom: 2px solid #fff;
-    transition: width 0.5s ease;
 }
 
 .page {

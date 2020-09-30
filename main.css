@@ -1,4 +1,6 @@
 @import '/share/style/animations.css';
+@import '/title.css';
+@import '/images.css';
 
 :root {
     --pad: 10vh;
