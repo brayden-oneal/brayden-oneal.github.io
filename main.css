@@ -1,6 +1,6 @@
+@import '/share/style/animations.css';
+
 :root {
-    --primary: #0066ff;
-    --secondary: #ff6600;
     --pad: 10vh;
 }
 
@@ -54,34 +54,20 @@ body {
 }
 
 .nav *:hover::before {
+    width: 100%;
+}
+
+.nav *::before {
     content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-    width: 100%;
+    width: 0;
+    overflow: hidden;
     height: 2px;
     border-bottom: 2px solid #222;
-    animation: widen 0.5s ease;
-}
-
-@keyframes widen {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(150%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    transition: width 0.5s ease;
 }
 
 .images {
@@ -157,14 +143,5 @@ body {
 
     .nav > * {
         animation: slideLeft 1.5s ease; 
-    }
-    
-    @keyframes slideLeft {
-        0% {
-            transform: translateX(150%);
-        }
-        100% {
-            transform: translateX(0);
-        }
     }
 }

@@ -1,6 +1,6 @@
+@import '/share/style/animations.css';
+
 :root {
-    --primary: #0066ff;
-    --secondary: #ff6600;
     --pad: 100px;
 }
 
@@ -11,6 +11,7 @@
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -39,15 +40,6 @@ body {
     animation: slideRight 1.0s ease;
 }
 
-@keyframes slideRight {
-    0% {
-        transform: translateX(-150%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .nav {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -66,36 +58,21 @@ body {
 }
 
 .nav *:hover::before {
+    width: calc(100% - 100px);
+}
+
+.nav *::before {
     content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-    width: calc(100% - 100px);
+    width: 0;
+    overflow: hidden;
     height: 2px;
     border-bottom: 2px solid #fff;
-    animation: widen 0.5s ease;
+    transition: width 0.5s ease;
 }
-
-@keyframes widen {
-    0% {
-        width: 0;
-    }
-    
-    100% {
-        width: calc(100% - 100px);
-    }
-}
-
-@keyframes slideLeft {
-    0% {
-        transform: translateX(150%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
 
 .page {
     margin-top: 100px;

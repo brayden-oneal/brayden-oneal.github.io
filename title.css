@@ -1,3 +1,5 @@
+@import '/share/style/animations.css';
+
 .title-logo, .title-logo img {
     background-color: none;
     height: 80px;
@@ -38,13 +40,4 @@
 
 .title-words-bottom p {
     animation: slideDown 1.0s ease; 
-}
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-150%);
-    }
-    100% {
-        transform: translateY(0);
-    }
 }
