@@ -1,4 +1,4 @@
-/*import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
+import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
 
 let camera;
 let renderer;
@@ -103,33 +103,4 @@ function animate() {
 }
 
 init();
-animate();*/
-
-import * as THREE from './three.js-dev/build/three.module.js';
-
-var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera( 50, window.innerWidth/window.innerHeight, 0.1, 1000 );
-
-			var renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
-
-			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			var material = new THREE.MeshBasicMaterial( { color: 0x005E99 } );
-     // var material = new THREE.MeshPhongMaterial( { map:                 THREE.ImageUtils.loadTexture('https://www.gravatar.com/avatar/af8c21275e3a73b3349c0de336186106?s=256&d=identicon') } );
-
-			var cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
-
-			camera.position.z = 5;
-
-			var render = function () {
-				requestAnimationFrame( render );
-
-				cube.rotation.x += 0.1;
-				cube.rotation.y += 0.1;
-
-				renderer.render(scene, camera);
-			};
-
-			render();
+animate();
