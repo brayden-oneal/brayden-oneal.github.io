@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minecraft Web</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="the-menus">
+        <!-- Level 0 -->
+
+        <div id="title" class="screen">
+            <div id="panorama"></div>
+            <div class="blur"></div>
+            <div class="section1">
+                <div class="minecraft">
+                    <div class="splash">
+                        <span>Survive!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section3">
+                <div class="menu">
+                    <div class="button singleplayer">
+                        <div class="right"></div><span>Singleplayer</span>
+                    </div>
+                    <div class="button multiplayer">
+                        <div class="right"></div><span>Multiplayer</span>
+                    </div>
+                    <div class="button texture-packs">
+                        <div class="right"></div><span>Texture Packs</span>
+                    </div>
+                    <div class="button options">
+                        <div class="right"></div><span>Options...</span>
+                    </div>
+                    <div class="button quit-game">
+                        <div class="right"></div><span>Quit Game</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="version">
+                    <!-- <span>Minecraft Web Alpha v1.0.0</span> -->
+                    <span>Minecraft 1.0.0</span>
+                </div>
+                <div class="copyright">
+                    <!-- <span>Not affiliated with Mojang AB.</span> -->
+                    <span>Copyright Mojang AB. Do not distribute!</span>
+                </div>
+            </div>
+        </div>
+        <div id="game" class="screen" style="display: none;"></div>
+
+        <!-- Level 1 -->
+
+        <div id="singleplayer" class="screen" style="display: none;">
+            
+        </div>
+
+        <div id="multiplayer" class="screen" style="display: none;">
+
+        </div>
+
+        <div id="texture-packs" class="screen" style="display: none;">
+
+        </div>
+
+        <div id="options" class="screen" style="display: none;">
+            <div class="background"></div>
+            <div class="title">Options</div>
+            <div class="menu">
+                <div class="button music">
+                    <div class="right"></div><span>Music: 100%</span>
+                </div>
+                <div class="button sound">
+                    <div class="right"></div><span>Sound: 100%</span>
+                </div>
+                <div class="button invert-mouse">
+                    <div class="right"></div><span>Invert Mouse: OFF</span>
+                </div>
+                <div class="button sensitivity">
+                    <div class="right"></div><span>Sensitivity: 50%</span>
+                </div>
+                <div class="button fov">
+                    <div class="right"></div><span>FOV: Normal</span>
+                </div>
+                <div class="button difficulty">
+                    <div class="right"></div><span>Difficulty: Normal</span>
+                </div>
+                <div class="button video-settings">
+                    <div class="right"></div><span>Video Settings...</span>
+                </div>
+                <div class="button controls">
+                    <div class="right"></div><span>Controls...</span>
+                </div>
+                <div class="button done">
+                    <div class="right"></div><span>Done</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Level 2 -->
+
+        <div id="create-new-world" class="screen" style="display: none;">
+
+        </div>
+
+        <div id="direct-connect" class="screen" style="display: none;">
+
+        </div>
+
+        <div id="add-server" class="screen" style="display: none;">
+
+        </div>
+
+        <div id="video-settings" class="screen" style="display: none;">
+
+        </div>
+
+        <div id="controls" class="screen" style="display: none;">
+
+        </div>
+
+        <!-- Level 3 -->
+
+        <div id="more-world-options" class="screen" style="display: none;">
+
+        </div>
+    </div>
+
+    <svg class='hideSvgSoThatItSupportsFirefox'>
+        <filter id='sharpBlur'>
+            <feGaussianBlur stdDeviation='12'></feGaussianBlur>
+            <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
+            <feComposite in2='SourceGraphic' operator='in'></feComposite>
+        </filter>
+    </svg>
+</body>
+<script src="panorama.js" type="module"></script>
+<script src="js/new.js"></script>
+</html>
